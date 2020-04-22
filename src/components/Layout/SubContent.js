@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H3, Colors, Icon } from "../Common";
+import { H3, Colors, FacebookIcon, Icon } from "../Common";
 
 const SubContentContainer = styled.div`
   display: grid;
@@ -10,14 +10,14 @@ const SubContentContainer = styled.div`
 
 const ContentHeading = styled(H3)`
   text-align: left;
-  background-color: ${Colors.SunsetOrange};
+  background-color: ${Colors.ShadowedSteelGrey};
   color: ${Colors.White};
   line-height: 45px;
 `;
 
 const SocialPluginHeading = styled(H3)`
   text-align: center;
-  background-color: ${Colors.DarkPeriwinkleBlue};
+  background-color: ${Colors.ShadowedSteelGrey};
   color: ${Colors.White};
   line-height: 45px;
 `;
@@ -69,6 +69,11 @@ export const SubContent = () => (
     <SocialMediaContainer>
       <SocialPluginHeading>Social Plugin</SocialPluginHeading>
       <SocialPluginContainer>
+        {/* <FacebookIcon
+          width="200px"
+          height="100px"
+          color="#010002"
+        ></FacebookIcon> */}
         <Icon></Icon>
         <Icon></Icon>
         <Icon></Icon>

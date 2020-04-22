@@ -4,7 +4,9 @@ import styled from "styled-components";
 import { Anchor, Colors } from "../Common";
 
 const HeaderContainer = styled.header`
-  background-color: ${Colors.ClearChillBlue};
+  background-color: ${Colors.ShadowedSteelGrey};
+  padding: 0px 10px;
+  font-weight: 600;
 `;
 const Navbar = styled.nav`
   display: flex;
