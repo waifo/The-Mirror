@@ -12,7 +12,7 @@ const MainContentSectionContainer = styled.div`
   margin: 10px 10px;
   padding: 10px;
   background-color: ${Colors.White};
-  box-shadow: 0 2px 4px rgba(0, 0, , 0.06);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -21,7 +21,6 @@ const MainContentSectionContainer = styled.div`
   grid-row-gap: 10px;
 `;
 const ImageTagTextContainer = styled.div`
-  border: 1px solid ${Colors.White};
   border-radius: 5px;
   position: relative;
   display: inline-block;
