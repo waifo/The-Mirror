@@ -11,6 +11,10 @@
     "start": "yarn workspace frontend start",
     "build": "yarn workspace frontend build",
     "test": "yarn workspace frontend test",
-    "eject": "yarn workspace frontend eject"
+    "eject": "yarn workspace frontend eject",
+    "backend:test": "echo \"Error: no test specified\" && exit 1",
+    "backend:start": "yarn workspace backend start",
+    "backend:debug": "yarn workspace backend debug",
+    "backend:build": "yarn workspace backend build"
   }
 }
