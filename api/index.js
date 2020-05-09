@@ -4,7 +4,6 @@ import Debug from "debug";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 // import dotenv from "dotenv";
-import path from "path";
 
 import config from "../webpack.config.js";
 import apolloServer from "./apolloServer";
@@ -24,10 +23,6 @@ app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
   })
-);
-
-app.get("/", (req, res) =>
-  res.sendFile(path.resolve("./", "public/index.html"))
 );
 
 connectMongoDB().then((db) => {
