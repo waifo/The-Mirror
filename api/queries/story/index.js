@@ -1,8 +1,11 @@
-import getAllStories from "./all-stories";
+import { allStories, primaryStories, recentStories, stories } from "./stories";
 
 const StoryQueries = {
   Query: {
-    getAllStories,
+    allStories,
+    primaryStories,
+    recentStories,
+    stories,
   },
 };
 

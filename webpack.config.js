@@ -16,6 +16,7 @@ module.exports = {
   },
   target: "node",
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  devtool: "eval-source-map",
   module: {
     rules: [
       {
