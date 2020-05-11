@@ -1,10 +1,15 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import { ApolloProvider } from "react-apollo";
+import { BrowserRouter } from "react-router-dom";
 
 import { Colors } from "./components/Common";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { MainContentSection, SubContent } from "./components/Layout";
+import Routes from "./routes";
+import client from "./graphql";
+
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import { MainContentSection, SubContent } from "./components/Layout";
 
 import TitilliumWebRegular from "./font/TitilliumWeb-Regular.ttf";
 import TitilliumWebLight from "./font/TitilliumWeb-Light.ttf";
@@ -40,13 +45,14 @@ body{
 
 function App() {
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Header />
-      <MainContentSection />
-      <SubContent />
-      <Footer />
-    </div>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <div className="App">
+          <GlobalStyle />
+          <Routes />
+        </div>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
 

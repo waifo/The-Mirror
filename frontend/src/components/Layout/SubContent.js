@@ -59,45 +59,39 @@ const YoutubeContainer = styled.div`
 `;
 
 export const SubContent = () => (
-  <SubContentContainer>
-    <ContentContainer>
-      <ContentHeading>Recent Posts</ContentHeading>
-      <CardContainer>
-        <Card>
-          <Image src={Image1} />
-        </Card>
-        <Card>
-          <Image src={Image2} />
-        </Card>
-        <Card>
-          <Image src={Image3} />
-        </Card>
-        <Card>
-          <Image src={Image4} />
-        </Card>
-      </CardContainer>
-    </ContentContainer>
-    <SocialMediaContainer>
-      <SocialPluginHeading>Social Plugin</SocialPluginHeading>
-      <SocialPluginContainer>
-        {/* <FacebookIcon
-          width="200px"
-          height="100px"
-          color="#010002"
-        ></FacebookIcon> */}
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-      </SocialPluginContainer>
-      <SocialPluginHeading>Advertisement</SocialPluginHeading>
-      <AdContainer></AdContainer>
-      <SocialPluginHeading>Youtube</SocialPluginHeading>
-      <YoutubeContainer></YoutubeContainer>
-    </SocialMediaContainer>
-  </SubContentContainer>
+  <div></div>
+  // <Card>
+  //   <Image src={Image1} />
+  // </Card>
+  // <Card>
+  //   <Image src={Image2} />
+  // </Card>
+  // <Card>
+  //   <Image src={Image3} />
+  // </Card>
+  // <Card>
+  //   <Image src={Image4} />
+  // </Card>
+  // <SocialMediaContainer>
+  //   <SocialPluginHeading>Social Plugin</SocialPluginHeading>
+  //   <SocialPluginContainer>
+  //     {/* <FacebookIcon
+  //       width="200px"
+  //       height="100px"
+  //       color="#010002"
+  //     ></FacebookIcon> */}
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //     <Icon></Icon>
+  //   </SocialPluginContainer>
+  //   <SocialPluginHeading>Advertisement</SocialPluginHeading>
+  //   <AdContainer></AdContainer>
+  //   <SocialPluginHeading>Youtube</SocialPluginHeading>
+  //   <YoutubeContainer></YoutubeContainer>
+  // </SocialMediaContainer>
 );

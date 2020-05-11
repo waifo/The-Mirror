@@ -9,18 +9,6 @@ import Image4 from "../../images/MC-4.jpg";
 import { Colors, Image, Tag, H4 } from "../Common";
 
 const MainContentSectionContainer = styled.div`
-  margin: 10px 10px;
-  padding: 10px;
-  background-color: ${Colors.White};
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-auto-rows: auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-`;
-const ImageTagTextContainer = styled.div`
   border-radius: 5px;
   position: relative;
   display: inline-block;
@@ -50,55 +38,16 @@ const TimeStamp = styled.div`
   margin: 10px 0px 5px 0px;
 `;
 
-export const MainContentSection = () => (
-  <MainContentSectionContainer>
-    {[
-      <ImageTagTextContainer>
-        <Image src={Image1} />
-        <Tag>Fashion</Tag>
-        <ContentTitle>
-          It is a long established fact that a reader will be distracted by the
-          readable
-          <TimeStamp>{new Date().toString()}</TimeStamp>
-        </ContentTitle>
-      </ImageTagTextContainer>,
-      <ImageTagTextContainer>
-        <Image src={Image2} />
-        <Tag>Fashion</Tag>
-        <ContentTitle>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC
-          <TimeStamp>{new Date().toString()}</TimeStamp>
-        </ContentTitle>
-      </ImageTagTextContainer>,
-      <ImageTagTextContainer>
-        <Image src={Image3} />
-        <Tag>Fashion</Tag>
-        <ContentTitle>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected humour
-          <TimeStamp>{new Date().toString()}</TimeStamp>
-        </ContentTitle>
-      </ImageTagTextContainer>,
-      <ImageTagTextContainer>
-        <Image src={Image4} />
-        <Tag>Fashion</Tag>
-        <ContentTitle>
-          The point of using Lorem Ipsum is that it has a more-or-less normal
-          distribution of letters, as opposed to using 'Content here, content
-          here
-          <TimeStamp>{new Date().toString()}</TimeStamp>
-        </ContentTitle>
-      </ImageTagTextContainer>,
-      <ImageTagTextContainer>
-        <Image src={Image2} />
-        <Tag>Fashion</Tag>
-        <ContentTitle>
-          It is a long established fact that a reader will be distracted by the
-          readable
-          <TimeStamp>{new Date().toString()}</TimeStamp>
-        </ContentTitle>
-      </ImageTagTextContainer>,
-    ]}
-  </MainContentSectionContainer>
-);
+export const MainContentSection = ({ story }) => {
+  let { category, shortDesc, thumbnail, createdBy, createdAt } = story;
+  return (
+    <MainContentSectionContainer>
+      <Image src={thumbnail} />
+      <Tag>{category}</Tag>
+      <ContentTitle>
+        {shortDesc}
+        <TimeStamp>{new Date(createdAt).toString()}</TimeStamp>
+      </ContentTitle>
+    </MainContentSectionContainer>
+  );
+};
