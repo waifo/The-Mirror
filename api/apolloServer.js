@@ -59,7 +59,7 @@ const apolloServer = new ApolloServer({
       {
         endpoint:
           process.env.NODE_ENV === "production"
-            ? process.env.PRODUCTION_URL + process.env.PLAYGROUND_URL
+            ? process.env.HEROKU_PRODUCTION_URL + process.env.PLAYGROUND_URL
             : `http://localhost:${process.env.PORT}/api`,
       },
     ],
