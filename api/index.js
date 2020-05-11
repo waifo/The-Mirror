@@ -3,6 +3,7 @@ import compression from "compression";
 import Debug from "debug";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
+import cors from "cors";
 // import dotenv from "dotenv";
 import path from "path";
 
@@ -19,6 +20,7 @@ const app = express();
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 const compiler = webpack(config);
 
+app.use(cors());
 app.use(compression());
 app.use(
   webpackDevMiddleware(compiler, {
