@@ -10,9 +10,27 @@ const Story = `
     isPrimary: Boolean
     }
 
+    type PageInfo{
+        endCursor:ID!
+        hasNextPage:Boolean!
+    }
+
+    type StoryEdge{
+        cursor:ID!
+        node:Story!
+    }
+
+    type StoryConnection{
+        edges:[StoryEdge]
+        pageInfo:PageInfo
+    }
+
+
     extend type Query{
-        getAllStories:[Story]
-        getPrimaryStories:[Story]
+        allStories:[Story]
+        primaryStories:[Story]
+        recentStories:[Story]
+        stories(first:Int!,after:ID):StoryConnection
     }
 
 `;

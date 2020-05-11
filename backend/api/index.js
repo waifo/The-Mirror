@@ -4,6 +4,7 @@ import Debug from "debug";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 // import dotenv from "dotenv";
+import path from "path";
 
 import config from "../webpack.config.js";
 import apolloServer from "./apolloServer";
@@ -24,7 +25,8 @@ app.use(
     publicPath: config.output.publicPath,
   })
 );
-
+app.use(express.static("public"));
+app.get("/", (req, res) => res.sendFile("index.html"));
 connectMongoDB().then((db) => {
   debug(`connection db object ${db}`);
   apolloServer.applyMiddleware({ app, path: process.env.PLAYGROUND_URL });
