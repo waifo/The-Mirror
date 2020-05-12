@@ -1,12 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import Image1 from "../../images/MC-1.jpg";
 import Image2 from "../../images/MC-2.jpg";
 import Image3 from "../../images/MC-3.jpg";
 import Image4 from "../../images/MC-4.jpg";
 
-import { Colors, Image, Tag, H4 } from "../Common";
+import { Colors, Image, Tag, H4, mediaQuery } from "../Common";
 
 const MainContentSectionContainer = styled.div`
   border-radius: 5px;

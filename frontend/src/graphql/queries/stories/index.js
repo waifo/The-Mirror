@@ -8,6 +8,18 @@ export const GET_ALL_STORIES = gql`
   }
 `;
 
+export const GET_PRIMARY_STORIES = gql`
+  {
+    primaryStories {
+      category
+      shortDesc
+      createdBy
+      thumbnail
+      createdAt
+    }
+  }
+`;
+
 export const GET_PRIMARY_AND_RECENT_STORIES = gql`
   {
     primaryStories {

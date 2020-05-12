@@ -3,7 +3,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { ApolloClient } from "apollo-boost";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:5000/api",
+  uri: "https://the-mirror.herokuapp.com/api",
 });
 
 const cache = new InMemoryCache();
