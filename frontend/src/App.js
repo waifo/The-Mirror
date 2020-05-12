@@ -2,6 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { ApolloProvider } from "react-apollo";
 import { BrowserRouter } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import { Colors } from "./components/Common";
 import Routes from "./routes";
@@ -42,6 +43,10 @@ body{
   background-color:${Colors.White}
 }
 `;
+ReactGA.initialize("UA-166254976-1", {
+  debug: true,
+});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (
