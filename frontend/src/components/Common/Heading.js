@@ -19,3 +19,7 @@ export const ContentHeadingLight = styled(H4)`
   color: ${Colors.Black};
   font-size: 18px;
 `;
+
+export const ContentHeadingH3White = styled(H3)`
+  color: ${Colors.White};
+`;

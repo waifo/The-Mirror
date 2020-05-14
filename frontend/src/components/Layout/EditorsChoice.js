@@ -40,12 +40,12 @@ export const EditorsChoice = () => {
       <ContentHeading>Editors Choice</ContentHeading>
       <CardContainer>
         {data.primaryStories.map((story) => (
-          <EditorsChoiceCard>
-            <Image src={story.thumbnail} />
+          <EditorsChoiceCard key={story.createdAt}>
+            <Image src={story.thumbnail} loading="lazy" />
             <Contents>
               <ContentHeadingLight>{story.shortDesc}</ContentHeadingLight>
 
-              <Meta class="post-meta">
+              <Meta>
                 <span>
                   Jun 14 <span>•</span> 3 min read <span></span>
                 </span>

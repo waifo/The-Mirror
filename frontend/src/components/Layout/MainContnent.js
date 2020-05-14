@@ -1,12 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import Image1 from "../../images/MC-1.jpg";
-import Image2 from "../../images/MC-2.jpg";
-import Image3 from "../../images/MC-3.jpg";
-import Image4 from "../../images/MC-4.jpg";
-
-import { Colors, Image, Tag, H4, mediaQuery } from "../Common";
+import { Colors, Image, Tag, H4, mediaQuery, Shimmer } from "../Common";
 
 const MainContentSectionContainer = styled.div`
   border-radius: 5px;
@@ -20,6 +15,7 @@ const MainContentSectionContainer = styled.div`
   &:nth-child(1) {
     grid-row: 1/3;
   }
+  background-color: lightgrey;
 `;
 
 const ContentTitle = styled(H4)`
@@ -42,7 +38,7 @@ export const MainContentSection = ({ story }) => {
   let { category, shortDesc, thumbnail, createdBy, createdAt } = story;
   return (
     <MainContentSectionContainer>
-      <Image src={thumbnail} />
+      <Image src={thumbnail} loading="lazy" />
       <Tag>{category}</Tag>
       <ContentTitle>
         {shortDesc}

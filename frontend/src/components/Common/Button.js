@@ -32,6 +32,7 @@ const ButtonContainer = styled.button`
   font-weight: bolder;
   margin: 5px;
   &:hover {
+    cursor: pointer;
   }
 `;
 

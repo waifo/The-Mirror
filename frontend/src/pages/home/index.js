@@ -3,13 +3,22 @@ import styled, { css } from "styled-components";
 import { Query } from "react-apollo";
 
 import Spinner from "../../components/Spinner";
+import Adsense from "../../components/Adsense";
 import {
   MainContentSection,
   SubContent,
   RecentPosts,
   EditorsChoice,
 } from "../../components/Layout";
-import { Colors, H3, Card, Icon, mediaQuery } from "../../components/Common";
+import {
+  Colors,
+  H3,
+  Card,
+  Icon,
+  mediaQuery,
+  FacebookIcon,
+  TwitterIcon,
+} from "../../components/Common";
 
 import {
   GET_ALL_STORIES,
@@ -110,6 +119,9 @@ const Home = () => (
               <YoutubeContainer></YoutubeContainer>
             </SocialMediaContainer> */}
           {/* </SubContentContainer> */}
+          <Adsense />
+          {/* <FacebookIcon width="200" height="200" bgColor="red" />
+          <TwitterIcon width="200" height="200" bgColor="red" /> */}
         </HomeContainer>
       );
     }}
