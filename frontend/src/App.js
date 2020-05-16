@@ -43,9 +43,20 @@ body{
   background-color:${Colors.White}
 }
 `;
-ReactGA.initialize("UA-166254976-1", {
-  debug: true,
-});
+ReactGA.initialize([
+  {
+    trackingId: "UA-166254976-1",
+    gaOptions: {
+      debug: true,
+    },
+  },
+  {
+    trackingId: "UA-166777819-1",
+    gaOptions: {
+      debug: true,
+    },
+  },
+]);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
