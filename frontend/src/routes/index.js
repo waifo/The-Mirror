@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Spinner from "../components/Spinner";
 
 const Home = lazy(() => import("../pages/home"));
+const StoryDetail = lazy(() => import("../pages/story"));
 
 const Routes = () => (
   <div>
@@ -13,6 +14,10 @@ const Routes = () => (
     <Switch>
       <Suspense fallback={<Spinner />}>
         <Route exact={true} path="/" component={Home} />
+        <Route
+          path={`/:storyId`}
+          render={(props) => <StoryDetail {...props} />}
+        />
       </Suspense>
     </Switch>
     <Footer />

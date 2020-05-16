@@ -7,6 +7,7 @@ const HeaderContainer = styled.header`
   background-color: ${Colors.ShadowedSteelGrey};
   padding: 0px 10px;
   font-weight: 600;
+  color: ${Colors.White};
 `;
 const Navbar = styled.nav`
   display: flex;
@@ -26,7 +27,6 @@ const HeaderLinkContainer = styled.div`
 const HeaderAnchor = styled(Anchor)`
   margin: 5px 10px;
   line-height: 30px;
-  color: ${Colors.White};
 `;
 const Header = () => (
   <HeaderContainer>

@@ -14,7 +14,7 @@ const CardContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   ${mediaQuery.mobile(css`
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   `)}
 `;
 

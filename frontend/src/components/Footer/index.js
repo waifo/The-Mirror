@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import {
   Colors,
   TwitterIcon,
   ContentHeadingH3White,
   LoveIcon,
+  mediaQuery,
 } from "../Common";
 
 const FooterContainer = styled.footer`
@@ -17,6 +18,9 @@ const FooterContainer = styled.footer`
 const FooterContent = styled.div`
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
+  ${mediaQuery.mobile(css`
+    grid-template-columns: 1fr;
+  `)}
   justify-items: center;
   padding: 5px 20px 0px;
   margin-top: 20px;
