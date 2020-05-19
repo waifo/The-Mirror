@@ -2,7 +2,14 @@ import React, { useRef, useCallback } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import styled, { css } from "styled-components";
 
-import { Button, Colors, ContentHeading, Card, mediaQuery } from "../Common";
+import {
+  Button,
+  Colors,
+  ContentHeading,
+  Card,
+  mediaQuery,
+  Shimmer,
+} from "../Common";
 import Spinner from "../Spinner";
 import { GET_PAGINATED_STORIES } from "../../graphql/queries/stories";
 
@@ -16,6 +23,11 @@ const CardContainer = styled.div`
   ${mediaQuery.mobile(css`
     grid-template-columns: 1fr 1fr;
   `)}
+`;
+
+const ShimmerContainer = styled.div`
+  height: 300px;
+  ${Shimmer}
 `;
 
 const CardElement = styled.div``;
@@ -70,32 +82,46 @@ export const RecentPosts = () => {
   //     [data]
   //   );
 
-  if (loading) return <Spinner />;
   if (error) return <div>Error</div>;
   return (
     <RecentPostContainer>
       <ContentHeading>Recent Posts</ContentHeading>
       <CardContainer>
-        {data.stories.edges.map((story, index) => {
-          if (index === data.stories.edges.length - 1)
-            return (
-              //Element for Infinte scroll
+        {loading ? (
+          <>
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+          </>
+        ) : (
+          data.stories.edges.map((story, index) => {
+            if (index === data.stories.edges.length - 1)
+              return (
+                //Element for Infinte scroll
 
-              //   <CardElement key={story.node.createdAt} ref={lastStoryRef}>
-              //     <Card content={story.node} />
-              //   </CardElement>
+                //   <CardElement key={story.node.createdAt} ref={lastStoryRef}>
+                //     <Card content={story.node} />
+                //   </CardElement>
 
-              <CardElement key={story.node.createdAt}>
-                <Card content={story.node} />
-              </CardElement>
-            );
-          else
-            return (
-              <CardElement key={story.node.createdAt}>
-                <Card content={story.node} />
-              </CardElement>
-            );
-        })}
+                <CardElement key={story.node.createdAt}>
+                  <Card content={story.node} />
+                </CardElement>
+              );
+            else
+              return (
+                <CardElement key={story.node.createdAt}>
+                  <Card content={story.node} />
+                </CardElement>
+              );
+          })
+        )}
       </CardContainer>
       <ButtonContainer>
         <Button onClick={loadMore}>More</Button>

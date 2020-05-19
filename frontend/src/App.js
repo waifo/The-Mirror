@@ -8,10 +8,6 @@ import { Colors } from "./components/Common";
 import Routes from "./routes";
 import client from "./graphql";
 
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-// import { MainContentSection, SubContent } from "./components/Layout";
-
 import TitilliumWebRegular from "./font/TitilliumWeb-Regular.ttf";
 import TitilliumWebLight from "./font/TitilliumWeb-Light.ttf";
 import TitilliumWebExtraLight from "./font/TitilliumWeb-ExtraLight.ttf";

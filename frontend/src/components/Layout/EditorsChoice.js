@@ -8,6 +8,7 @@ import {
   Image,
   Colors,
   mediaQuery,
+  Shimmer,
 } from "../Common";
 import { GET_PRIMARY_STORIES } from "../../graphql/queries/stories";
 import Spinner from "../Spinner";
@@ -30,29 +31,43 @@ const CardContainer = styled.div`
 `;
 const Contents = styled.div``;
 const Meta = styled.div``;
-
+const ShimmerContainer = styled.div`
+  height: 127px;
+  max-height: 400px;
+  ${Shimmer}
+`;
 export const EditorsChoice = () => {
   const { loading, data, error } = useQuery(GET_PRIMARY_STORIES);
-  if (loading) return <Spinner />;
   if (error) return <div>Error</div>;
   return (
     <EditorsChoiceContainer>
       <ContentHeading>Editors Choice</ContentHeading>
       <CardContainer>
-        {data.primaryStories.map((story) => (
-          <EditorsChoiceCard key={story.createdAt}>
-            <Image src={story.thumbnail} loading="lazy" />
-            <Contents>
-              <ContentHeadingLight>{story.shortDesc}</ContentHeadingLight>
+        {loading ? (
+          <>
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+            <ShimmerContainer />
+          </>
+        ) : (
+          data.primaryStories.map((story) => (
+            <EditorsChoiceCard key={story.createdAt}>
+              <Image src={story.thumbnail} loading="lazy" />
+              <Contents>
+                <ContentHeadingLight>{story.shortDesc}</ContentHeadingLight>
 
-              <Meta>
-                <span>
-                  Jun 14 <span>•</span> 3 min read <span></span>
-                </span>
-              </Meta>
-            </Contents>
-          </EditorsChoiceCard>
-        ))}
+                <Meta>
+                  <span>
+                    Jun 14 <span>•</span> 3 min read <span></span>
+                  </span>
+                </Meta>
+              </Contents>
+            </EditorsChoiceCard>
+          ))
+        )}
       </CardContainer>
     </EditorsChoiceContainer>
   );

@@ -18,6 +18,7 @@ import {
   mediaQuery,
   FacebookIcon,
   TwitterIcon,
+  Shimmer,
 } from "../../components/Common";
 
 import {
@@ -43,85 +44,52 @@ const MainSection = styled.div`
   `)}
 `;
 
-// const SubContentContainer = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-gap: 10px;
-// `;
+const ShimmerContainer = styled.div`
+  height: 300px;
+  ${Shimmer};
+
+  &:nth-child(1) {
+    grid-row: 1/3;
+    height: 610px;
+  }
+  ${mediaQuery.mobile(css`
+    &:nth-child(1) {
+      grid-row: 1/1;
+      height: 300px;
+    }
+  `)}
+`;
+
 const RecentStoriesContainer = styled.div``;
-// const SocialMediaContainer = styled.div``;
 
-// const SocialPluginHeading = styled(H3)`
-//   text-align: center;
-//   background-color: ${Colors.ShadowedSteelGrey};
-//   color: ${Colors.White};
-//   line-height: 45px;
-// `;
-
-// const SocialPluginContainer = styled.div`
-//   background-color: ${Colors.SwedishLightGrey};
-//   padding: 20px;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-gap: 10px;
-// `;
-// const CardContainer = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-gap: 10px;
-// `;
-
-// const AdContainer = styled.div`
-//   background-color: ${Colors.SwedishLightGrey};
-//   width: 100%;
-//   height: 300px;
-// `;
-
-// const YoutubeContainer = styled.div`
-//   background-color: ${Colors.SwedishLightGrey};
-//   width: 100%;
-//   height: 232px;
-// `;
 const Home = () => (
   <Query query={GET_PRIMARY_AND_RECENT_STORIES}>
     {({ loading, error, data }) => {
-      if (loading) return <Spinner />;
+      // if (loading) return <ShimmerContainer />;
       if (error) return console.log("Error", error);
       return (
         <HomeContainer>
           <MainSection>
-            {data.primaryStories.map((story) => (
-              <MainContentSection key={story.createdAt} story={story} />
-            ))}
+            {loading ? (
+              <>
+                <ShimmerContainer />
+                <ShimmerContainer />
+                <ShimmerContainer />
+                <ShimmerContainer />
+                <ShimmerContainer />
+              </>
+            ) : (
+              data.primaryStories.map((story) => (
+                <MainContentSection key={story.createdAt} story={story} />
+              ))
+            )}
           </MainSection>
           <EditorsChoice />
           <RecentStoriesContainer>
             <RecentPosts />
           </RecentStoriesContainer>
-          {/* <SubContentContainer> */}
-          {/* 
-            <SocialMediaContainer>
-              <SocialPluginHeading>Social Plugin</SocialPluginHeading>
 
-              <SocialPluginContainer>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-                <Icon></Icon>
-              </SocialPluginContainer>
-              <SocialPluginHeading>Advertisement</SocialPluginHeading>
-              <AdContainer></AdContainer>
-              <SocialPluginHeading>Youtube</SocialPluginHeading>
-              <YoutubeContainer></YoutubeContainer>
-            </SocialMediaContainer> */}
-          {/* </SubContentContainer> */}
           <Adsense />
-          {/* <FacebookIcon width="200" height="200" bgColor="red" />
-          <TwitterIcon width="200" height="200" bgColor="red" /> */}
         </HomeContainer>
       );
     }}

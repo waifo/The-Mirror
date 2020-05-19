@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { Colors, Image, Tag, H4, mediaQuery, Shimmer } from "../Common";
 
 const MainContentSectionContainer = styled.div`
+  height: 300px;
   border-radius: 5px;
   position: relative;
   display: inline-block;
@@ -12,9 +13,17 @@ const MainContentSectionContainer = styled.div`
     cursor: pointer;
     opacity: 0.8;
   }
+
   &:nth-child(1) {
     grid-row: 1/3;
+    height: 610px;
   }
+  ${mediaQuery.mobile(css`
+    &:nth-child(1) {
+      grid-row: 1/1;
+      height: 300px;
+    }
+  `)}
   background-color: lightgrey;
 `;
 
