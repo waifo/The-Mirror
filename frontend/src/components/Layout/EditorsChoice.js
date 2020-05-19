@@ -31,11 +31,7 @@ const CardContainer = styled.div`
 `;
 const Contents = styled.div``;
 const Meta = styled.div``;
-const ShimmerContainer = styled.div`
-  height: 127px;
-  max-height: 400px;
-  ${Shimmer}
-`;
+
 export const EditorsChoice = () => {
   const { loading, data, error } = useQuery(GET_PRIMARY_STORIES);
   if (error) return <div>Error</div>;
@@ -44,14 +40,7 @@ export const EditorsChoice = () => {
       <ContentHeading>Editors Choice</ContentHeading>
       <CardContainer>
         {loading ? (
-          <>
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-          </>
+          <Shimmer height="127px" count={6} />
         ) : (
           data.primaryStories.map((story) => (
             <EditorsChoiceCard key={story.createdAt}>

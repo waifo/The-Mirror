@@ -44,10 +44,7 @@ const MainSection = styled.div`
   `)}
 `;
 
-const ShimmerContainer = styled.div`
-  height: 300px;
-  ${Shimmer};
-
+const ShimmerCss = css`
   &:nth-child(1) {
     grid-row: 1/3;
     height: 610px;
@@ -71,13 +68,7 @@ const Home = () => (
         <HomeContainer>
           <MainSection>
             {loading ? (
-              <>
-                <ShimmerContainer />
-                <ShimmerContainer />
-                <ShimmerContainer />
-                <ShimmerContainer />
-                <ShimmerContainer />
-              </>
+              <Shimmer css={ShimmerCss} height="300px" count={5} />
             ) : (
               data.primaryStories.map((story) => (
                 <MainContentSection key={story.createdAt} story={story} />

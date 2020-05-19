@@ -1,4 +1,5 @@
-import { css, keyframes } from "styled-components";
+import React from "react";
+import styled, { css, keyframes } from "styled-components";
 
 const placeholderShimmer = keyframes`
     0% {
@@ -10,7 +11,7 @@ const placeholderShimmer = keyframes`
     }
   `;
 
-export const Shimmer = css`
+const ShimmerCss = css`
   background: #f6f7f8;
   background-image: linear-gradient(
     to right,
@@ -26,3 +27,17 @@ export const Shimmer = css`
   -webkit-animation-name: ${placeholderShimmer};
   -webkit-animation-timing-function: linear;
 `;
+
+const ShimmerContainer = styled.div`
+  height: ${(props) => (props.height ? props.height : 0)};
+  ${(props) => (props.customStyle ? props.customStyle : null)};
+  ${ShimmerCss};
+`;
+
+export const Shimmer = ({ height, count, css }) => {
+  const shimmerArray = [];
+  for (let i = 0; i < count; i++) {
+    shimmerArray.push(<ShimmerContainer customStyle={css} height={height} />);
+  }
+  return shimmerArray;
+};

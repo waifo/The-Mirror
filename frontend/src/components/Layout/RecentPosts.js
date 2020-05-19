@@ -25,11 +25,6 @@ const CardContainer = styled.div`
   `)}
 `;
 
-const ShimmerContainer = styled.div`
-  height: 300px;
-  ${Shimmer}
-`;
-
 const CardElement = styled.div``;
 
 const ButtonContainer = styled.div`
@@ -88,18 +83,7 @@ export const RecentPosts = () => {
       <ContentHeading>Recent Posts</ContentHeading>
       <CardContainer>
         {loading ? (
-          <>
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-            <ShimmerContainer />
-          </>
+          <Shimmer height="300px" count={10} />
         ) : (
           data.stories.edges.map((story, index) => {
             if (index === data.stories.edges.length - 1)
