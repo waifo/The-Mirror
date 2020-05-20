@@ -17,7 +17,10 @@ debug("Starting Server <-->");
 const app = express();
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 const compiler = webpack(config);
-Sentry.init({ dsn: process.env.SENTRY_DSN });
+
+process.env === "production"
+  ? Sentry.init({ dsn: process.env.SENTRY_DSN })
+  : null;
 
 process.env === "production" ? app.use(Sentry.Handlers.requestHandler()) : null;
 app.use(cors());
