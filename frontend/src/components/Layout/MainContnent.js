@@ -7,7 +7,6 @@ const MainContentSectionContainer = styled.div`
   height: 300px;
   border-radius: 5px;
   position: relative;
-  display: inline-block;
   transition: opacity 0.36s ease;
   &:hover {
     cursor: pointer;
@@ -27,15 +26,18 @@ const MainContentSectionContainer = styled.div`
   background-color: lightgrey;
 `;
 
-const ContentTitle = styled(H4)`
+const ContentTitle = styled.div`
   color: ${Colors.White};
   position: absolute;
-  left: 10px;
   bottom: 0px;
-  margin: 0px;
-  font-family: Titillium Web Light;
+  left: 0px;
+  right: 0px;
+  padding: 5px;
+  background-color: ${Colors.ShadowedSteelGreyRGBA};
 `;
-
+const StoryHeading = styled(H4)`
+  margin: 2px;
+`;
 const TimeStamp = styled.div`
   font-family: Titillium Web Extra Light;
   font-style: italic;
@@ -50,8 +52,7 @@ export const MainContentSection = ({ story }) => {
       <Image src={thumbnail} loading="lazy" />
       <Tag>{category}</Tag>
       <ContentTitle>
-        {shortDesc}
-        <TimeStamp>{new Date(createdAt).toString()}</TimeStamp>
+        <StoryHeading>{shortDesc}</StoryHeading>
       </ContentTitle>
     </MainContentSectionContainer>
   );

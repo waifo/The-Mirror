@@ -2,10 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { Card, Image, H3, Colors, FacebookIcon, Icon } from "../Common";
-import Image1 from "../../images/MC-1.jpg";
-import Image2 from "../../images/MC-2.jpg";
-import Image3 from "../../images/MC-3.jpg";
-import Image4 from "../../images/MC-4.jpg";
 
 const SubContentContainer = styled.div`
   display: grid;

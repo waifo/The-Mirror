@@ -7,8 +7,8 @@ export const Tag = styled.div`
   top: 10px;
   display: inline-block;
   text-align: center;
-  width: 70px;
-  height: 20px;
-  background-color: rgba(27, 156, 252, 0.6);
+  height: 25px;
+  padding: 0px 5px;
+  background-color: ${Colors.ShadowedSteelGreyRGBA};
   color: ${Colors.White};
 `;
