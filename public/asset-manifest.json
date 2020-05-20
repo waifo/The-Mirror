@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.151d9c35.chunk.js",
-    "main.js.map": "/static/js/main.151d9c35.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5ca30242.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5ca30242.js.map",
-    "static/js/2.9fb4c290.chunk.js": "/static/js/2.9fb4c290.chunk.js",
-    "static/js/2.9fb4c290.chunk.js.map": "/static/js/2.9fb4c290.chunk.js.map",
-    "static/js/3.70e207f8.chunk.js": "/static/js/3.70e207f8.chunk.js",
-    "static/js/3.70e207f8.chunk.js.map": "/static/js/3.70e207f8.chunk.js.map",
-    "static/js/4.d80790b4.chunk.js": "/static/js/4.d80790b4.chunk.js",
-    "static/js/4.d80790b4.chunk.js.map": "/static/js/4.d80790b4.chunk.js.map",
+    "main.js": "/static/js/main.15698ded.chunk.js",
+    "main.js.map": "/static/js/main.15698ded.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4c195cf0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4c195cf0.js.map",
+    "static/js/2.02f421f8.chunk.js": "/static/js/2.02f421f8.chunk.js",
+    "static/js/2.02f421f8.chunk.js.map": "/static/js/2.02f421f8.chunk.js.map",
+    "static/js/3.0d29204c.chunk.js": "/static/js/3.0d29204c.chunk.js",
+    "static/js/3.0d29204c.chunk.js.map": "/static/js/3.0d29204c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b1b72623fc789ca48e49d2f6605d42dc.js": "/precache-manifest.b1b72623fc789ca48e49d2f6605d42dc.js",
+    "precache-manifest.e06223ba731487883b999829e9e30867.js": "/precache-manifest.e06223ba731487883b999829e9e30867.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.9fb4c290.chunk.js.LICENSE.txt": "/static/js/2.9fb4c290.chunk.js.LICENSE.txt",
+    "static/js/2.02f421f8.chunk.js.LICENSE.txt": "/static/js/2.02f421f8.chunk.js.LICENSE.txt",
     "static/media/MC-1.jpg": "/static/media/MC-1.38efbb4e.jpg",
     "static/media/MC-2.jpg": "/static/media/MC-2.c28f1795.jpg",
     "static/media/MC-3.jpg": "/static/media/MC-3.2de756ff.jpg",
@@ -23,8 +21,8 @@
     "static/media/TitilliumWeb-Regular.ttf": "/static/media/TitilliumWeb-Regular.ed1d014b.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ca30242.js",
-    "static/js/2.9fb4c290.chunk.js",
-    "static/js/main.151d9c35.chunk.js"
+    "static/js/runtime-main.4c195cf0.js",
+    "static/js/2.02f421f8.chunk.js",
+    "static/js/main.15698ded.chunk.js"
   ]
 }
