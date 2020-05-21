@@ -10,6 +10,15 @@ export const getAllStories = (db) =>
       .then((res) => res),
   }));
 
+export const getStoryById = (db, ID) =>
+  createReadQuery(() => ({
+    query: db
+      .collection("stories")
+      .find({ _id: ObjectId(ID) })
+      .toArray()
+      .then((res) => res[0]),
+  }));
+
 export const getPrimayStories = (db) =>
   createReadQuery(() => ({
     query: db

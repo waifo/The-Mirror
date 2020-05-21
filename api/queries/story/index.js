@@ -1,8 +1,15 @@
-import { allStories, primaryStories, recentStories, stories } from "./stories";
+import {
+  allStories,
+  storyById,
+  primaryStories,
+  recentStories,
+  stories,
+} from "./stories";
 
 const StoryQueries = {
   Query: {
     allStories,
+    storyById,
     primaryStories,
     recentStories,
     stories,

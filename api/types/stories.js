@@ -28,6 +28,7 @@ const Story = `
 
     extend type Query{
         allStories:[Story]
+        storyById(ID:String):Story
         primaryStories:[Story]
         recentStories:[Story]
         stories(first:Int!,after:ID):StoryConnection

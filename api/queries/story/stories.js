@@ -1,5 +1,6 @@
 import {
   getAllStories,
+  getStoryById,
   getPrimayStories,
   getRecentStories,
   getStories,
@@ -7,6 +8,10 @@ import {
 
 export const allStories = (_, __, { db }) => {
   return getAllStories(db)();
+};
+
+export const storyById = (_, { ID }, { db }) => {
+  return getStoryById(db, ID)();
 };
 
 export const primaryStories = (_, __, { db }) => {
