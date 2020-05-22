@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.864c4cd6.chunk.js",
-    "main.js.map": "/static/js/main.864c4cd6.chunk.js.map",
+    "main.js": "/static/js/main.839922a3.chunk.js",
+    "main.js.map": "/static/js/main.839922a3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.990cce63.js",
     "runtime-main.js.map": "/static/js/runtime-main.990cce63.js.map",
     "static/js/2.d700aace.chunk.js": "/static/js/2.d700aace.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/3.80abd86a.chunk.js": "/static/js/3.80abd86a.chunk.js",
     "static/js/3.80abd86a.chunk.js.map": "/static/js/3.80abd86a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.50e22494701e6e713cf98f24b684dacb.js": "/precache-manifest.50e22494701e6e713cf98f24b684dacb.js",
+    "precache-manifest.541a21ae38f21781c6eb76e1aa32e7fe.js": "/precache-manifest.541a21ae38f21781c6eb76e1aa32e7fe.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.d700aace.chunk.js.LICENSE.txt": "/static/js/2.d700aace.chunk.js.LICENSE.txt",
     "static/media/TitilliumWeb-ExtraLight.ttf": "/static/media/TitilliumWeb-ExtraLight.f291df8d.ttf",
@@ -19,6 +19,6 @@
   "entrypoints": [
     "static/js/runtime-main.990cce63.js",
     "static/js/2.d700aace.chunk.js",
-    "static/js/main.864c4cd6.chunk.js"
+    "static/js/main.839922a3.chunk.js"
   ]
 }
