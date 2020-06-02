@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { useHistory, useRouteMatch } from "react-router-dom";
 
 import { Colors, Image, Tag, H4, mediaQuery, Shimmer } from "../Common";
 
@@ -46,9 +47,13 @@ const TimeStamp = styled.div`
 `;
 
 export const MainContentSection = ({ story }) => {
-  let { category, shortDesc, thumbnail, createdBy, createdAt } = story;
+  let { _id, category, shortDesc, thumbnail, createdBy, createdAt } = story;
+  let history = useHistory();
+  let match = useRouteMatch();
   return (
-    <MainContentSectionContainer>
+    <MainContentSectionContainer
+      onClick={() => history.push(`${match.url}${_id}`)}
+    >
       <Image src={thumbnail} loading="lazy" />
       <Tag>{category}</Tag>
       <ContentTitle>

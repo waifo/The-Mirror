@@ -29,6 +29,7 @@ const Story = `
     extend type Query{
         allStories:[Story]
         primaryStories:[Story]
+        editorStories:[Story]
         recentStories:[Story]
         stories(first:Int!,after:ID):StoryConnection
     }

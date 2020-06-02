@@ -8,9 +8,33 @@ export const GET_ALL_STORIES = gql`
   }
 `;
 
+export const GET_STORY_BY_ID = gql`
+  query getStoryById($ID: String!) {
+    storyById(ID: $ID) {
+      category
+      shortDesc
+      fullStory
+      createdBy
+      thumbnail
+      createdAt
+    }
+  }
+`;
+
 export const GET_PRIMARY_STORIES = gql`
   {
     primaryStories {
+      category
+      shortDesc
+      createdBy
+      thumbnail
+      createdAt
+    }
+  }
+`;
+export const GET_EDITOR_STORIES = gql`
+  {
+    editiorStories {
       category
       shortDesc
       createdBy
@@ -23,6 +47,7 @@ export const GET_PRIMARY_STORIES = gql`
 export const GET_PRIMARY_AND_RECENT_STORIES = gql`
   {
     primaryStories {
+      _id
       category
       shortDesc
       createdBy
@@ -30,6 +55,7 @@ export const GET_PRIMARY_AND_RECENT_STORIES = gql`
       createdAt
     }
     recentStories {
+      _id
       category
       shortDesc
       createdBy
@@ -44,6 +70,7 @@ export const GET_PAGINATED_STORIES = gql`
     stories(first: $first, after: $after) {
       edges {
         node {
+          _id
           category
           shortDesc
           thumbnail

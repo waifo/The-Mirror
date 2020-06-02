@@ -80,7 +80,7 @@ const Home = () => (
             <RecentPosts />
           </RecentStoriesContainer>
 
-          <Adsense />
+          {/* <Adsense /> */}
         </HomeContainer>
       );
     }}
