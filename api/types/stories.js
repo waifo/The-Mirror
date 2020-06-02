@@ -30,6 +30,7 @@ const Story = `
         allStories:[Story]
         storyById(ID:String):Story
         primaryStories:[Story]
+        editorStories:[Story]
         recentStories:[Story]
         stories(first:Int!,after:ID):StoryConnection
     }

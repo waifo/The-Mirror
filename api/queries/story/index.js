@@ -2,6 +2,7 @@ import {
   allStories,
   storyById,
   primaryStories,
+  editorStories,
   recentStories,
   stories,
 } from "./stories";
@@ -11,7 +12,9 @@ const StoryQueries = {
     allStories,
     storyById,
     primaryStories,
+    editorStories,
     recentStories,
+
     stories,
   },
 };
