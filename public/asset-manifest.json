@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.ae1b0f7d.chunk.js",
-    "main.js.map": "/static/js/main.ae1b0f7d.chunk.js.map",
+    "main.js": "/static/js/main.25631d00.chunk.js",
+    "main.js.map": "/static/js/main.25631d00.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6025f33e.js",
     "runtime-main.js.map": "/static/js/runtime-main.6025f33e.js.map",
-    "static/js/2.d475524e.chunk.js": "/static/js/2.d475524e.chunk.js",
-    "static/js/2.d475524e.chunk.js.map": "/static/js/2.d475524e.chunk.js.map",
+    "static/js/2.454f71ef.chunk.js": "/static/js/2.454f71ef.chunk.js",
+    "static/js/2.454f71ef.chunk.js.map": "/static/js/2.454f71ef.chunk.js.map",
     "static/js/3.31f56fea.chunk.js": "/static/js/3.31f56fea.chunk.js",
     "static/js/3.31f56fea.chunk.js.map": "/static/js/3.31f56fea.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f6e0e89e35e9aa2546d1a8b1728e247a.js": "/precache-manifest.f6e0e89e35e9aa2546d1a8b1728e247a.js",
+    "precache-manifest.43b432056dcfe0e1587d0a278046b154.js": "/precache-manifest.43b432056dcfe0e1587d0a278046b154.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.d475524e.chunk.js.LICENSE.txt": "/static/js/2.d475524e.chunk.js.LICENSE.txt",
+    "static/js/2.454f71ef.chunk.js.LICENSE.txt": "/static/js/2.454f71ef.chunk.js.LICENSE.txt",
     "static/media/TitilliumWeb-ExtraLight.ttf": "/static/media/TitilliumWeb-ExtraLight.f291df8d.ttf",
     "static/media/TitilliumWeb-Light.ttf": "/static/media/TitilliumWeb-Light.edc21ba4.ttf",
     "static/media/TitilliumWeb-Regular.ttf": "/static/media/TitilliumWeb-Regular.ed1d014b.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.6025f33e.js",
-    "static/js/2.d475524e.chunk.js",
-    "static/js/main.ae1b0f7d.chunk.js"
+    "static/js/2.454f71ef.chunk.js",
+    "static/js/main.25631d00.chunk.js"
   ]
 }
