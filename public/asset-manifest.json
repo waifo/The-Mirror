@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.7bd0d60d.chunk.js",
-    "main.js.map": "/static/js/main.7bd0d60d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b5fe8d4d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b5fe8d4d.js.map",
+    "main.js": "/static/js/main.ae1b0f7d.chunk.js",
+    "main.js.map": "/static/js/main.ae1b0f7d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6025f33e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6025f33e.js.map",
     "static/js/2.d475524e.chunk.js": "/static/js/2.d475524e.chunk.js",
     "static/js/2.d475524e.chunk.js.map": "/static/js/2.d475524e.chunk.js.map",
-    "static/js/3.d072e7b5.chunk.js": "/static/js/3.d072e7b5.chunk.js",
-    "static/js/3.d072e7b5.chunk.js.map": "/static/js/3.d072e7b5.chunk.js.map",
+    "static/js/3.31f56fea.chunk.js": "/static/js/3.31f56fea.chunk.js",
+    "static/js/3.31f56fea.chunk.js.map": "/static/js/3.31f56fea.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0d99e19fe3baedebb8adbc93228c97b8.js": "/precache-manifest.0d99e19fe3baedebb8adbc93228c97b8.js",
+    "precache-manifest.f6e0e89e35e9aa2546d1a8b1728e247a.js": "/precache-manifest.f6e0e89e35e9aa2546d1a8b1728e247a.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.d475524e.chunk.js.LICENSE.txt": "/static/js/2.d475524e.chunk.js.LICENSE.txt",
     "static/media/TitilliumWeb-ExtraLight.ttf": "/static/media/TitilliumWeb-ExtraLight.f291df8d.ttf",
@@ -17,8 +17,8 @@
     "static/media/TitilliumWeb-Regular.ttf": "/static/media/TitilliumWeb-Regular.ed1d014b.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5fe8d4d.js",
+    "static/js/runtime-main.6025f33e.js",
     "static/js/2.d475524e.chunk.js",
-    "static/js/main.7bd0d60d.chunk.js"
+    "static/js/main.ae1b0f7d.chunk.js"
   ]
 }
