@@ -1,6 +1,7 @@
 import {
   getAllStories,
   getPrimayStories,
+  getEditorStories,
   getRecentStories,
   getStories,
 } from "../../../shared/db/queries/story";
@@ -11,6 +12,10 @@ export const allStories = (_, __, { db }) => {
 
 export const primaryStories = (_, __, { db }) => {
   return getPrimayStories(db)();
+};
+
+export const editorStories = (_, __, { db }) => {
+  return getEditorStories(db)();
 };
 
 export const recentStories = (_, __, { db }) => {

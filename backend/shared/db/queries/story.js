@@ -21,6 +21,17 @@ export const getPrimayStories = (db) =>
       .then((res) => res),
   }));
 
+export const getEditorStories = (db) =>
+  createReadQuery(() => ({
+    query: db
+      .collection("stories")
+      .find({ isEditorsChoice: true })
+      .sort({ _id: -1 })
+      .limit(5)
+      .toArray()
+      .then((res) => res),
+  }));
+
 export const getRecentStories = (db) =>
   createReadQuery(() => ({
     query: db

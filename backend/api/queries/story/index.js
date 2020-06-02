@@ -4,6 +4,7 @@ const StoryQueries = {
   Query: {
     allStories,
     primaryStories,
+    editorStories,
     recentStories,
     stories,
   },
